@@ -1,0 +1,51 @@
+import static org.testng.AssertJUnit.assertEquals;
+import org.openqa.selenium.By;
+//import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class FirstTestCase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//create object for chrome browser
+		//Strictly implement methods of webdriver interface
+		//Invoke .exe file
+		System.setProperty("webdriver.chrome.driver","C:\\Browser drivers\\chromedriver.exe" );
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		
+		//1. Open up a browser windows and navigate to 'https://www.google.ca/'
+		driver.get("https://www.google.ca/");
+		
+		//2. Enter 'PayBright' in google search and click on Google Search button
+		WebElement element = driver.findElement(By.xpath("//*[@name='q']"));
+		element.sendKeys("PayBright");
+		element.submit();
+		
+		//Verify google search text
+		System.out.println("Current title is :" + driver.getTitle());
+		driver.manage().window().maximize();
+		
+		//3. Verify that "paybright.com" is present on the screen
+		if(driver.findElement(By.xpath("//*[@id='rso']/div[1]/div/div/div[1]/a/div/cite"))!= null){
+			System.out.println("paybright.com is present on the screen");
+			}else{
+			System.out.println("paybright.com is absent");
+			}
+		
+		//4. Navigate to 'https://paybright.com/en/' and verify PayBright website is loaded
+		driver.get("https://paybright.com/en/");
+		String URL = driver.getCurrentUrl();
+		Assert.assertEquals(URL,"https://paybright.com/en/");
+		System.out.println("URL verified");
+		//System.out.println("Current title is :" + driver.getCurrentUrl());
+
+	}
+
+}
