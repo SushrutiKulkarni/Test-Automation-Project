@@ -1,0 +1,51 @@
+package com.pba.testcases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.pba.base.TestBase;
+
+public class Testcase1 extends TestBase{
+	
+	@Test
+	public void testCase() throws InterruptedException{
+	
+		log.debug("Inside TestCase1!");
+		//2. Enter 'PayBright' in google search and click on Google Search button
+		WebElement element = driver.findElement(By.xpath(OR.getProperty("GoogleSearch")));
+		element.sendKeys("PayBright");
+		element.submit();
+		
+		//Verify google search text
+		log.debug("Current title is :" + driver.getTitle());
+		
+		//3. Verify that "paybright.com" is present on the screen
+				/*if(driver.findElement(By.xpath("//*[@id='rso']/div[1]/div/div/div[1]/a/div/cite"))!= null){
+					System.out.println("paybright.com is present on the screen");
+					}else{
+					System.out.println("paybright.com is absent");
+					}*/
+				Assert.assertTrue(isElementPresent(By.xpath(OR.getProperty("Link"))), "Link is absent!");
+				//new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='rso']/div[1]/div/div/div[1]/a/div/cite")))){
+				log.debug("www.paybright.com is present on the screen!");
+				
+				//4. Navigate to 'https://paybright.com/en/' and verify PayBright website is loaded
+				driver.navigate().to(config.getProperty("testsiteurl2"));
+				String URL = driver.getCurrentUrl();
+				Assert.assertEquals(URL,"https://paybright.com/en/");
+				log.debug("Current title is :" + driver.getTitle());
+				
+				//5. Navigate to 'https://paybright.com/en/shop-directory'
+				driver.findElement(By.xpath(OR.getProperty("Shop"))).click();
+				String VURL = driver.getCurrentUrl();
+				Assert.assertEquals(VURL,"https://paybright.com/en/shop-directory");
+				log.debug("Navigated sucessfully to " + driver.getTitle());
+
+		
+		
+
+	}
+
+}

@@ -1,9 +1,10 @@
-package com.w2a.utilities;
+package com.pba.utilities;
 
 import java.io.FileInputStream;
 
 import java.io.FileOutputStream;
 
+import org.apache.bcel.classfile.Constant;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -65,10 +66,12 @@ public static String getCellData(int rowNum, int colNum) throws Exception{
 
 			}
 		
+}
+		
 
 		//This method is to write in the Excel cell, Row num and Col num are the parameters
 
-		public static String setCellData(String Result;  String RowNum; String ColNum) throws Exception{
+		public static void setCellData(String Result, int RowNum, int ColNum) throws Exception{
 
    			try{
 
@@ -107,5 +110,4 @@ public static String getCellData(int rowNum, int colNum) throws Exception{
 
 						}	
 
-}
 }

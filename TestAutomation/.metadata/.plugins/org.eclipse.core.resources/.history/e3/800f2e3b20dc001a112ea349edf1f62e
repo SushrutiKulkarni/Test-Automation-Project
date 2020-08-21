@@ -1,0 +1,3 @@
+browser=chrome
+testsiteurl=https://www.paybright.com/en/
+implicit.wait=10

@@ -2,10 +2,12 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.w2a"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="TestAutomation"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -44,6 +46,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\nihar.joshi\eclipse-workspace"/>
+			<item value="C:\Users\nihar.joshi\Selenium automation projects\Paybright"/>
+			<item value="C:\Users\nihar.joshi\Selenium automation projects"/>
 			<item value="C:\Users\nihar.joshi\workspace"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -57,13 +62,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.w2a.DataDrivenFramework"/>
 		</list>
 		<list key="groupId">
-			<item value="com.w2a"/>
 		</list>
 		<list key="artifactId">
-			<item value="DataDrivenFramework"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

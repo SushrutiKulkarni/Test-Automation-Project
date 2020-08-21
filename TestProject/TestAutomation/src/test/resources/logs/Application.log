@@ -1,0 +1,12 @@
+12/08/2020 11:34:29 devpinoyLogger Config file loaded !!!
+12/08/2020 11:34:29 devpinoyLogger OR file loaded !!!
+12/08/2020 11:35:26 devpinoyLogger Chrome browser launched !!!
+12/08/2020 11:36:11 devpinoyLogger Navigated to :https://www.google.ca/
+12/08/2020 11:36:16 devpinoyLogger Inside TestCase1!
+12/08/2020 11:37:32 devpinoyLogger Current title is :PayBright - Google Search
+12/08/2020 11:37:34 devpinoyLogger www.paybright.com is present on the screen!
+12/08/2020 11:40:01 devpinoyLogger Current title is :PayBright: Canada's leading buy now pay later solution | Paybright
+12/08/2020 11:40:25 devpinoyLogger Navigated sucessfully to Shop Directory | Paybright
+12/08/2020 11:41:21 devpinoyLogger Sorted and searched correctly !! 
+12/08/2020 11:41:26 devpinoyLogger Test case Passed, Samsung present in search results!
+12/08/2020 11:42:58 devpinoyLogger Test execution completed !!!
